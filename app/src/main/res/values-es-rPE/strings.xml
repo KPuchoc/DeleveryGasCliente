@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">sportwearstoreolivos</string>
+    <string name="title_activity_home">Inicio</string>
+    <string name="Forgot_pwd">¿Olvidaste tu Contraseña?</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="place_Order">Tomar Orden</string>
+    <string name="SingIn">Inicia Sesion</string>
+    <string name="SingUp">Registrate</string>
+    <string name="Altocontraste">Alto Contraste</string>
+    <string name="language">Idioma</string>
+    <string name="Tamañodefuente">Tamaño de Texto</string>
+    <string name="Refresh">Refrescar</string>
+    <string name="ChangePassword">Cambiar Contraseña</string>
+    <string name="Cart">Carrito</string>
+    <string name="Orders">Pedidos</string>
+    <string name="SingOut">Cerrar Sesion</string>
+</resources>

@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Sportwearstoreolivos" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#2B5AA0</item>
+        <item name="colorPrimaryVariant">#2B5A9F</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/purple_500</item>
+        <item name="colorSecondaryVariant">@color/purple_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/overlayBackground</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="Theme.Sportwearstoreolivos.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Sportwearstoreolivos.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Sportwearstoreolivos.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CollapsedAppbar" parent="@style/TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize" >24sp</item>
+        <item name="android:textColor" >@android:color/white</item>
+        <item name="android:textStyle" >normal</item>
+    </style>
+
+    <style name="ExpandedAppbar" parent="@style/TextAppearance.Material3.TitleMedium">
+
+        <item name="android:textColor" >@android:color/primary_text_light</item>
+        <item name="android:textStyle" >normal</item>
+    </style>
+
+    <style name="RatingDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/white</item>
+        <item name="buttonBarPositiveButtonStyle">@style/RatingDialogButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/RatingDialogButtonStyle</item>
+    </style>
+
+    <style name="RatingDialogButtonStyle" parent="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/overlayBackground</item>
+        <item name="textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="RatingDialogFadeAnim" >
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+</resources>

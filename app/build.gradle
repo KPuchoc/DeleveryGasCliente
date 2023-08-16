@@ -1,0 +1,85 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.sportwearstoreolivos'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.sportwearstoreolivos"
+        minSdk 29
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    buildToolsVersion '30.0.3'
+}
+
+dependencies {
+
+    implementation 'io.paperdb:paperdb:2.1'
+    implementation 'com.stepstone.apprating:app-rating:2.3.1'
+    implementation 'com.github.d-max:spots-dialog:0.7@aar'
+
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
+
+
+
+
+    implementation 'com.google.firebase:firebase-messaging:10.2.0'
+
+
+    implementation 'com.github.rey5137:material:1.2.4'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+    implementation 'com.github.mancj:MaterialSearchBar:0.7.1'
+
+    implementation 'com.google.android.gms:play-services-places:11.6.2'
+
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-fragment:2.4.1'
+    implementation 'androidx.navigation:navigation-ui:2.4.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'info.hoang8f:fbutton:1.0.5'
+    implementation'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.firebaseui:firebase-ui:1.2.0'
+    implementation 'com.firebaseui:firebase-ui-auth:1.2.0'
+
+
+
+
+
+
+
+
+}

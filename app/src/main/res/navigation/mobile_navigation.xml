@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.sportwearstoreolivos.ui.home.HomeFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.sportwearstoreolivos.ui.Cart.Cart"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="com.example.sportwearstoreolivos.ui.OrderStatus.OrderStatus"
+        android:label="OrderStatus"
+        tools:layout="@layout/fragment_order_status" />
+
+    <fragment
+        android:id="@+id/nav_ChangePassword"
+        android:name="com.example.sportwearstoreolivos.ui.ChangePassword.ChangePassword"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password"></fragment>
+    <fragment
+        android:id="@+id/nav_log_out"
+        android:name="com.example.sportwearstoreolivos.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+</navigation>
