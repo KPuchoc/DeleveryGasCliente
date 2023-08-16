@@ -28,6 +28,7 @@ public class SignUp extends AppCompatActivity {
         edtName=findViewById(R.id.edtName);
         edtPhone=findViewById(R.id.edtPhone);
         edtPassword=findViewById(R.id.edtPasswor);
+
         edtSecureCode=findViewById(R.id.edtSecureCode);
         btnSignUp=findViewById(R.id.BtnSignUp);
 
@@ -46,12 +47,15 @@ public class SignUp extends AppCompatActivity {
                     table_user.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                            //crear la base de datos del usuario
                             if (dataSnapshot.child(edtPhone.getText().toString()).exists()) {
                                 mDialog.dismiss();
                                 Toast.makeText(SignUp.this, "Telefono incorrecto", Toast.LENGTH_SHORT).show();
                             } else {
                                 mDialog.dismiss();
                                 User user = new User(edtName.getText().toString(), edtPassword.getText().toString(),edtSecureCode.getText().toString());
+                                //guarda el hijo con le numero de telefono
                                 table_user.child(edtPhone.getText().toString()).setValue(user);
                                 Toast.makeText(SignUp.this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
                                 finish();
