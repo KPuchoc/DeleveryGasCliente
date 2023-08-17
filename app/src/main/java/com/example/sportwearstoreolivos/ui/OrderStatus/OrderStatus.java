@@ -80,11 +80,11 @@ public class OrderStatus extends Fragment {
 
     private String convertCodeToStatus(String status) {
         if(status.equals("0"))
-            return "Placed";
+            return "En espera";
         else if(status.equals("1"))
-            return "On my way";
+            return "En camino";
         else
-            return "Shipped";
+            return "Enviado";
     }
 
 
