@@ -46,6 +46,7 @@ public class SportswearList extends AppCompatActivity {
     FirebaseRecyclerAdapter<Sportswear, SportswearViewHolder> adapter;
 
 
+    //buscador
     FirebaseRecyclerAdapter<Sportswear, SportswearViewHolder> searchAdapter;
     List<String> suggestList  =new ArrayList<>();
     MaterialSearchBar materialSearchBar;
@@ -119,8 +120,9 @@ public class SportswearList extends AppCompatActivity {
             }
         }
 
+        //buscador
        materialSearchBar=(MaterialSearchBar) findViewById(R.id.searchBar);
-       materialSearchBar.setHint("Enter your SportWear");
+       materialSearchBar.setHint("Buscar");
 
        loadSuggest();
        materialSearchBar.setLastSuggestions(suggestList);
@@ -134,7 +136,7 @@ public class SportswearList extends AppCompatActivity {
            @Override
            public void onTextChanged(CharSequence s, int i, int i1, int i2) {
                List<String>suggest=new ArrayList<>();
-               for(String search:suggestList)
+               for(String search:suggestList) //lista de sugerencias
                {
                    if(search.toLowerCase().contains(materialSearchBar.getText().toLowerCase()))
                        suggest.add(search);
@@ -193,6 +195,7 @@ public class SportswearList extends AppCompatActivity {
         recyclerView.setAdapter(searchAdapter);
     }
 
+    //
     private void loadSuggest() {
         sportswearlist.orderByChild("id").equalTo(categoryId)
                 .addValueEventListener(new ValueEventListener() {
