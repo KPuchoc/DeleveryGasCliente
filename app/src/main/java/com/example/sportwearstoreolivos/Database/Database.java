@@ -23,7 +23,7 @@ public class Database extends SQLiteAssetHelper {
     }
 
 
-
+    //orden del pedido vid-05 10:35
     public List<Order>gerCarts()
     {
         SQLiteDatabase db=getReadableDatabase();

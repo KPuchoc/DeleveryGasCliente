@@ -116,11 +116,12 @@ public class Cart extends AppCompatActivity {
 
     private void showAlertDialog() {
         AlertDialog.Builder alertDialog=new AlertDialog.Builder(this);
-        alertDialog.setTitle("One more step");
-        alertDialog.setMessage("Enter your Address: ");
+        alertDialog.setTitle("Un paso más");
+        alertDialog.setMessage("Ingrese su Dirección: ");
 
         LayoutInflater inflater=this.getLayoutInflater();
         View order_address_comment=inflater.inflate(R.layout.order_address_comment,null);
+
         final MaterialEditText edtAddress=(MaterialEditText)order_address_comment.findViewById(R.id.edtAddress);
         final MaterialEditText edtComment=(MaterialEditText)order_address_comment.findViewById(R.id.edtComment);
 
@@ -130,6 +131,7 @@ public class Cart extends AppCompatActivity {
         alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                //creacion de la base de datos del pedido
                 Request request=new Request(
                         Common.currentUser.getPhone(),
                         Common.currentUser.getName(),
@@ -139,10 +141,11 @@ public class Cart extends AppCompatActivity {
                         edtComment.getText().toString(),
                         cart
                 );
+
                 requests.child(String.valueOf(System.currentTimeMillis()))
                         .setValue(request);
                 new Database(Cart.this).cleanToCart();
-                Toast.makeText(Cart.this, "Thank you ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Cart.this, "Gracias, pedido guardado", Toast.LENGTH_SHORT).show();
 
 
             }
@@ -204,6 +207,7 @@ public class Cart extends AppCompatActivity {
         });
     }
 
+    //vid 05 36:05
     private void loadListSportswear() {
         cart=new Database(this).gerCarts();
         adapter=new CartAdapter(cart,this);

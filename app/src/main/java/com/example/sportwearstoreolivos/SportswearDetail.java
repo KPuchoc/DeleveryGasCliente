@@ -80,7 +80,7 @@ public class SportswearDetail extends AppCompatActivity implements RatingDialogL
 
 
                 ));
-                Toast.makeText(SportswearDetail.this, "Added to Cart", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SportswearDetail.this, "Añadido al Carrito", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -19,7 +19,7 @@
 
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/edtAddress"
-                android:hint="Address"
+                android:hint="Dirreción"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
@@ -35,7 +35,7 @@
 
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/edtComment"
-                android:hint="Comment"
+                android:hint="Comentario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
