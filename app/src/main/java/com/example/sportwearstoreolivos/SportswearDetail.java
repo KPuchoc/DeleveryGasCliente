@@ -55,7 +55,7 @@ public class SportswearDetail extends AppCompatActivity implements RatingDialogL
         sportswear=database.getReference("Sportswear");
         ratingTbl=database.getReference("Rating");
 
-
+        //vid-04 19:20
         numberButton=(ElegantNumberButton) findViewById(R.id.number_button);
         btnCart=(FloatingActionButton) findViewById(R.id.btnCart);
         btnRating=(FloatingActionButton)findViewById(R.id.btn_rating);

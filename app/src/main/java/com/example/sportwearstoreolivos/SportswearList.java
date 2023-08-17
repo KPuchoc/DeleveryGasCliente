@@ -259,7 +259,7 @@ public class SportswearList extends AppCompatActivity {
                 }
             });
 
-
+            //vid-4 17:05
             final Sportswear local=model;
             viewHolder.setItemClickListener(new ItemClickListener() {
                 @Override
