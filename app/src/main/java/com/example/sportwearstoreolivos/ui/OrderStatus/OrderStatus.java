@@ -65,6 +65,8 @@ public class OrderStatus extends Fragment {
                 requests.orderByChild("phone")
                         .equalTo(phone)
         ) {
+
+            //corregir a futuro posilemente
             @Override
             protected void populateViewHolder(OrderViewHolder viewHolder, Request model, int position) {
                 viewHolder.txtOrderId.setText(adapter.getRef(position).getKey());

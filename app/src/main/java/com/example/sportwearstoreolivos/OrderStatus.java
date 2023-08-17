@@ -28,7 +28,7 @@ public class OrderStatus extends AppCompatActivity {
 
         database=FirebaseDatabase.getInstance();
         requests=database.getReference("Requests");
-        
+
         recyclerView=(RecyclerView) findViewById(R.id.listOrders);
         recyclerView.setHasFixedSize(true);
         layoutManager=new LinearLayoutManager(this);
@@ -38,7 +38,7 @@ public class OrderStatus extends AppCompatActivity {
             loadOrders(Common.currentUser.getPhone());
         else
             loadOrders(getIntent().getStringExtra("userPhone"));
-        
+
         loadOrders(Common.currentUser.getPhone());
     }
 
@@ -61,5 +61,14 @@ public class OrderStatus extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
+    //vid-6: 14:30
+//    private String convertCodeToStatus(String status){
+//        if(status.equals("0"))
+//            return  "Placed";
+//        else if(status.equals("1"))
+//            return  "En camino";
+//        else
+//            return  "Enviado";
+//    }
 
 }

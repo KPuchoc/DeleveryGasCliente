@@ -28,8 +28,12 @@ public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnC
         this.itemClickListener = itemClickListener;
     }
 
+    //lista de orden Corregido,
+    //el error
     @Override
     public void onClick(View view) {
-        itemClickListener.onClick(view,getAdapterPosition(),false);
+        if (itemClickListener != null) {
+            itemClickListener.onClick(view,getAdapterPosition(),false);
+        }
     }
 }

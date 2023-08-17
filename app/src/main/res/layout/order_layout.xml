@@ -55,7 +55,7 @@
                 android:gravity="center_vertical|start"
                 android:textAllCaps="true"
                 android:textStyle="italic"
-                android:text="Address"
+                android:text="Direccion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"></TextView>
         </LinearLayout>
