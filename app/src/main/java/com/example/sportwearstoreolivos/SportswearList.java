@@ -93,6 +93,7 @@ public class SportswearList extends AppCompatActivity {
 
         callbackManager=CallbackManager.Factory.create();
 
+        //base de datos
         database=FirebaseDatabase.getInstance();
         sportswearlist=database.getReference("Sportswear");
 
@@ -103,6 +104,7 @@ public class SportswearList extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
 
         if(getIntent()!=null)
             categoryId=getIntent().getStringExtra("CategoryId");
@@ -212,8 +214,12 @@ public class SportswearList extends AppCompatActivity {
                 });
     }
 
+
     private void loadsportswear(String categoryId) {
-    adapter=new FirebaseRecyclerAdapter<Sportswear, SportswearViewHolder>(Sportswear.class,R.layout.sportswear_item,SportswearViewHolder.class,sportswearlist.orderByChild("id").equalTo(categoryId)) {
+    adapter=new FirebaseRecyclerAdapter<Sportswear, SportswearViewHolder>(Sportswear.class,R.layout.sportswear_item,
+            SportswearViewHolder.class,
+            sportswearlist.orderByChild("id").equalTo(categoryId))
+    {
         @Override
         protected void populateViewHolder(SportswearViewHolder viewHolder, Sportswear model, int position) {
             viewHolder.sportswear_name.setText(model.getName());
@@ -266,7 +272,10 @@ public class SportswearList extends AppCompatActivity {
             });
         }
     };
-    //Log.d("TAG",""+adapter.getItemCount());
+
+
+
+    Log.d("TAG",""+adapter.getItemCount());
     recyclerView.setAdapter(adapter);
     }
 }

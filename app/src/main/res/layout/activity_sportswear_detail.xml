@@ -21,8 +21,9 @@
             android:fitsSystemWindows="true"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="#0e0d0e"
-
             >
+            <!-- app:expandedTitleTextAppearance="@android:color/transparent" -->
+
         <ImageView
             android:id="@+id/img_Sportswear"
             android:layout_width="match_parent"
@@ -140,17 +141,18 @@
                     </LinearLayout>
 
                     <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-                        android:layout_width="100dp"
-                        android:layout_height="30dp"
+                        android:layout_width="140dp"
+                        android:layout_height="48dp"
                         android:id="@+id/number_button"
                         android:layout_marginTop="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginBottom="18dp"
                         app:textSize="8dp"
+                        app:textColor="@color/white"
+                        android:scrollbarSize="@dimen/bottom_ellipsis_height"
                         app:backGroundColor="@color/overlayBackground"
                         app:initialNumber="1"
                         app:finalNumber="20"
-
                      ></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 
                 </LinearLayout>

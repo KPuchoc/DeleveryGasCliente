@@ -172,6 +172,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                       //  Toast.makeText(Home.this, ""+clickItem.getImage(), Toast.LENGTH_SHORT).show();
+                        //lista del menu
                         Intent sportswearList=new Intent(Home.this,SportswearList.class);
                         sportswearList.putExtra("CategoryId",adapter.getRef(position).getKey());
                         startActivity(sportswearList);
